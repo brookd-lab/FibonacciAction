@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build Code
+      run: ./build.ps1
+      shell: pwsh
+    - name: Run Action
+      uses: ./
+      id: sample
+      with:
+        fibNumber: 8

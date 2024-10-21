@@ -1,0 +1,11 @@
+name: 'Fibonacci Number'
+description: 'The best fibonacci number generator action on github'
+author: 'AspNetMonsters'
+inputs:
+  fibNumber:
+    required: true
+    description: 'The number you would like to generate up to'
+    default: '5'
+runs:
+  using: 'node12'
+  main: 'index.js'
